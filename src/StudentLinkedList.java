@@ -51,7 +51,7 @@ public class StudentLinkedList {
 				prev=current;
 				current=current.getNext();
 				if(current==null) {
-					prev.setNext(s);// not using nsertToEndOfList method here since it would be simpler to just do prev.setnext
+					prev.setNext(s);// not using insertToEndOfList method here since it would be simpler to just do prev.setnext
 					return;
 				}
 			}
@@ -123,7 +123,7 @@ public class StudentLinkedList {
 		while(temp.getNext()!=null) {
 			if (temp.getNext().getId()==id) {
 				if (temp.getNext().getNext()==null) {
-					temp.setNext(null);
+					temp.setNext(null);// not using removeEndElement since that would require more complexity.
 					return;
 				}
 				else {
@@ -138,12 +138,12 @@ public class StudentLinkedList {
 	 * This method prints the contents of the linked list
 	 */
 	public void printLinkedList (){
-		Student temp = head;
+		Student cursor = head;
 		if (head==null)
 			return;
-		while (temp!=null) {
-			System.out.println(temp.toString());
-			temp=temp.getNext();
+		while (cursor!=null) {
+			System.out.println(cursor.toString());
+			cursor=cursor.getNext();
 		}
 	}
 	
@@ -181,13 +181,14 @@ public class StudentLinkedList {
 		myHead.insertInOrder(new Student("Joe",9));
 		myHead.insertInOrder(new Student("Bob",40));
 		myHead.insertInOrder(new Student("ABC", 2));
+		myHead.insertInOrder(new Student("Student",9));
 		myHead.insertInOrder(new Student("Samuel",20));
 		myHead.removeEndElement();
 		myHead.removeEndElement();
 		myHead.removeFirstElement();
 		myHead.removeFirstElement();
 		myHead.removeElement(5);
-		System.out.println("Search Results= "+myHead.search(9));
+		System.out.println("Search Results= "+ myHead.search(9));
 		myHead.printLinkedList();
 	}
 }
