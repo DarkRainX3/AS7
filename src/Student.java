@@ -10,7 +10,7 @@ public class Student {
 	private Student next; //pointer that points to the next object
 	
 	/**
-	 * Constrcutor for student with a name and id number
+	 * Constructor for student with a name and id number
 	 * @param name Desired student name
 	 * @param id Desired student id
 	 */
