@@ -147,28 +147,6 @@ public class StudentLinkedList {
 		}
 	}
 	
-//	private boolean checkHead(Student s) {
-//		if (head == null) {
-//			head = s;
-//			return true;
-//		}
-//		return false;
-//	}
-//	
-//	private boolean checkOneAfterHead(Student s) {
-//		if (head.getNext()==null) {
-//			if (head.getId()<s.getId()) {
-//				head.setNext(s);
-//				return true;
-//			}
-//			else {
-//				s.setNext(head);
-//				head=s;
-//				return true;
-//			}
-//		}
-//		return false;
-//	}
 	
 	public static void main (String [] args){
 		StudentLinkedList myHead = new StudentLinkedList ();
